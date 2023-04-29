@@ -1,0 +1,15 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+
+n=100  #节点数
+k=5
+p=0.6
+G=nx.watts_strogatz_graph(n, k, p)
+
+G1 = nx.DiGraph()
+G1 = G.to_directed()
+
+
+
+nx.draw(G1)
+plt.show()
